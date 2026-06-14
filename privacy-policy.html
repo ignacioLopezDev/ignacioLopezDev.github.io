@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Privacidad – Mensajería Premier App</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f1117;
+      --surface: #1a1d27;
+      --border: #2a2d3a;
+      --accent: #4f8ef7;
+      --text: #e8eaf0;
+      --muted: #8b8fa8;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    header {
+      background: #131625;
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    header a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    header h1 { font-size: 1.4rem; font-weight: 700; }
+    header p  { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
+
+    main {
+      max-width: 760px;
+      margin: 48px auto 80px;
+      padding: 0 24px;
+    }
+
+    .meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 36px;
+      border-left: 3px solid var(--accent);
+      padding-left: 12px;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 36px 0 10px;
+      color: var(--accent);
+    }
+
+    p, li { color: #c8cad8; margin-bottom: 10px; font-size: 0.95rem; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+
+    .highlight {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+    }
+
+    code {
+      background: #23263a;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: var(--accent);
+    }
+
+    a { color: var(--accent); }
+
+    footer {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding: 24px;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="/">← Volver al inicio</a>
+  <h1>Política de Privacidad</h1>
+  <p>Mensajería Premier – Conector Google Sheets</p>
+</header>
+
+<main>
+  <div class="meta">
+    Última actualización: 14 de junio de 2025 &nbsp;·&nbsp; Desarrollado por Ignacio Lopez Dev · iglopez.com.ar
+  </div>
+
+  <h2>1. Quiénes somos</h2>
+  <p>
+    Ignacio Lopez Dev es un desarrollador independiente con sede en Argentina,
+    especializado en soluciones de análisis de datos con Microsoft Excel, Power Query
+    e integraciones con APIs de Google. Contacto:
+    <a href="mailto:ignacioLopezDev@gmail.com">ignacioLopezDev@gmail.com</a>.
+  </p>
+
+  <h2>2. Qué aplicación cubre esta política</h2>
+  <p>
+    Esta política cubre la aplicación <strong>Mensajería Premier – Conector Google Sheets</strong>,
+    registrada en Google Cloud Console. La aplicación permite que Microsoft Excel (a través de
+    Power Query) acceda en modo de solo lectura a hojas de cálculo de Google Sheets
+    seleccionadas por el usuario, con el único propósito de importar datos para análisis
+    operativos internos.
+  </p>
+
+  <h2>3. Qué datos accedemos y por qué</h2>
+  <div class="highlight">
+    <p>
+      La aplicación solicita el permiso
+      <code>https://www.googleapis.com/auth/spreadsheets.readonly</code>.
+      Este permiso permite <strong>leer</strong> el contenido de las hojas de cálculo
+      de Google Sheets del usuario autenticado.
+    </p>
+  </div>
+  <p>Accedemos a este permiso exclusivamente para:</p>
+  <ul>
+    <li>Importar datos desde hojas de cálculo de Google Sheets hacia consultas de Power Query.</li>
+    <li>Mostrar los datos importados en el entorno de análisis del propio usuario.</li>
+  </ul>
+  <p>
+    <strong>No leemos, almacenamos ni procesamos ningún dato de las hojas de cálculo
+    más allá de lo necesario para completar la consulta activa del usuario.</strong>
+  </p>
+
+  <h2>4. Qué NO hacemos con sus datos</h2>
+  <ul>
+    <li>No almacenamos el contenido de las hojas de cálculo en ningún servidor propio.</li>
+    <li>No compartimos, vendemos ni cedemos datos a terceros.</li>
+    <li>No utilizamos los datos para publicidad ni perfilado de usuarios.</li>
+    <li>No modificamos las hojas de cálculo del usuario (acceso de solo lectura).</li>
+    <li>No accedemos a hojas de cálculo distintas de las que el usuario selecciona explícitamente.</li>
+  </ul>
+
+  <h2>5. Retención de datos</h2>
+  <p>
+    Los tokens de acceso de Google se almacenan localmente en el dispositivo del usuario
+    (caché de Power Query / credenciales de Windows) y se utilizan únicamente para
+    autenticar las solicitudes activas. El desarrollador no retiene copias de dichos
+    tokens en ningún sistema externo.
+  </p>
+
+  <h2>6. Seguridad</h2>
+  <p>
+    La comunicación con la API de Google se realiza mediante HTTPS/TLS.
+    Los tokens OAuth se gestionan a través del protocolo estándar Google OAuth 2.0
+    y no se transmiten fuera del dispositivo del usuario.
+  </p>
+
+  <h2>7. Derechos del usuario</h2>
+  <p>
+    El usuario puede revocar el acceso de la aplicación en cualquier momento desde
+    <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">
+      Cuenta de Google → Seguridad → Aplicaciones de terceros con acceso a la cuenta
+    </a>.
+    La revocación invalida de inmediato todos los tokens emitidos.
+  </p>
+
+  <h2>8. Menores de edad</h2>
+  <p>
+    La aplicación está diseñada para uso profesional y empresarial.
+    No recopilamos intencionalmente información de menores de 13 años.
+  </p>
+
+  <h2>9. Cambios a esta política</h2>
+  <p>
+    Notificaremos cambios materiales actualizando la fecha al inicio de este documento.
+    El uso continuado de la aplicación después de la fecha de actualización implica
+    aceptación de los cambios.
+  </p>
+
+  <h2>10. Contacto</h2>
+  <p>
+    Para consultas sobre esta política escribinos a
+    <a href="mailto:ignacioLopezDev@gmail.com">ignacioLopezDev@gmail.com</a>.
+  </p>
+</main>
+
+<footer>
+  &copy; <span id="yr"></span> Ignacio Lopez Dev · iglopez.com.ar
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</footer>
+
+</body>
+</html>
